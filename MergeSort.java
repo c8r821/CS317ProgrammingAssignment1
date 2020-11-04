@@ -16,11 +16,9 @@ class MergeSort implements SortMethod {
     String[] left = new String[middle - start + 1];
     String[] right = new String[end - middle];
 
-    for (int i = 0; i < left.length; i++)
-      left[i] = list[start + i];
-    for (int i = 0; i < right.length; i++)
-      right[i] = list[middle + 1 + i];
-    
+    if (left.length >= 0) System.arraycopy(list, start, left, 0, left.length);
+    if (right.length >= 0) System.arraycopy(list, middle + 1, right, 0, right.length);
+
     int x = 0, y = 0, z = start;
 
     while (x < left.length && y < right.length) {

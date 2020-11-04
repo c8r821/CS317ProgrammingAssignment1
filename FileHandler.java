@@ -17,7 +17,7 @@ class FileHandler {
   private String[] contents;
 
   public void prompt() {
-    System.out.print("Enter the path to your imput file: ");
+    System.out.print("Enter the path to your input file: ");
     Scanner promptScanner = new Scanner(System.in);
     filename = promptScanner.nextLine();
     promptScanner.close();

@@ -1,4 +1,12 @@
+import java.util.Collections;
+
 class QuickSort implements SortMethod {
+  public void swap(String[] list, int a, int b) {
+    String tmp = list[a];
+    list[a] = list[b];
+    list[b] = tmp;
+  }
+
   public void sort(String[] list, int start, int end) {
     if (start < end) {
       int p = partition(list, start, end);
@@ -9,22 +17,31 @@ class QuickSort implements SortMethod {
   }
 
   public int partition(String[] list, int start, int end) {
-    String pivot = list[end];
-    int i = start - 1;
-    for (int x = start; x < end; x++) {
-      if (list[x].compareToIgnoreCase(pivot) < 0) {
+    String pivot = list[start]; // Use first value as pivot
+
+    int i = start + 1, j = end;
+
+    while (i < j) {
+      // moving i through array
+      while (list[i].compareToIgnoreCase(pivot) < 0)
         i++;
 
-        String temp = list[i];
-        list[i] = list[x];
-        list[x] = temp;
+      // moving j through array
+      while (list[j].compareToIgnoreCase(pivot) > 0)
+        j--;
+
+      // swap values at i and j
+      if (i <= j) {
+        swap(list, i, j);
+
+        // keep moving i and j
+        i++;
+        j--;
       }
     }
 
-    String temp = list[i + 1];
-    list[i + 1] = list[end];
-    list[end] = temp;
+    swap(list, start, j);
 
-    return i + 1;
+    return j;
   }
 }
