@@ -2,7 +2,7 @@ import java.time.Duration;
 import java.time.Instant;
 
 class Main {
-  private static FileHandler file = new FileHandler();
+  private static final FileHandler file = new FileHandler();
 
   public static void run(SortMethod method) {
     int length = file.parse();

@@ -13,8 +13,8 @@ class MergeSort implements SortMethod {
   }
 
   public void merge(String[] list, int start, int middle, int end) {
-    String left[] = new String[middle - start + 1];
-    String right[] = new String[end - middle];
+    String[] left = new String[middle - start + 1];
+    String[] right = new String[end - middle];
 
     for (int i = 0; i < left.length; i++)
       left[i] = list[start + i];
