@@ -22,7 +22,8 @@ class FileHandler {
     filename = promptScanner.nextLine();
     promptScanner.close();
 
-    try (int lineCount = (int)Files.lines(Paths.get(filename)).count()) {
+    try {
+      int lineCount = (int)Files.lines(Paths.get(filename)).count();
       contents = new String[lineCount];
     } catch (IOException e) {
       System.out.println("Could not read number of lines in file, please check permissions and try again.\n");
