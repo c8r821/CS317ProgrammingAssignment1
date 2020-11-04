@@ -10,21 +10,21 @@ class QuickSort implements SortMethod {
 
   public int partition(String[] list, int start, int end) {
     String pivot = list[end];
-    int pivotIndex = start - 1;
+    int i = start - 1;
     for (int x = start; x < end; x++) {
       if (list[x].compareToIgnoreCase(pivot) < 0) {
-        pivotIndex++;
+        i++;
 
-        String temp = list[pivotIndex];
-        list[pivotIndex] = list[x];
+        String temp = list[i];
+        list[i] = list[x];
         list[x] = temp;
       }
     }
 
-    String temp = list[pivotIndex + 1];
-    list[pivotIndex + 1] = list[end];
+    String temp = list[i + 1];
+    list[i + 1] = list[end];
     list[end] = temp;
 
-    return pivotIndex + 1;
+    return i + 1;
   }
 }

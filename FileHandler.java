@@ -2,17 +2,19 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 class FileHandler {
-  private static final int MAX_LINE_COUNT = 200000;
+  // private static final int MAX_LINE_COUNT = 200000;
 
   private int length;
 
   private String filename;
   private File file;
 
-  private String[] contents = new String[MAX_LINE_COUNT];
+  private String[] contents;
 
   public void prompt() {
     System.out.print("Enter the path to your imput file: ");
@@ -20,6 +22,12 @@ class FileHandler {
     filename = promptScanner.nextLine();
     promptScanner.close();
 
+    try (int lineCount = (int)Files.lines(Paths.get(filename)).count()) {
+      contents = new String[lineCount];
+    } catch (IOException e) {
+      System.out.println("Could not read number of lines in file, please check permissions and try again.\n");
+      System.exit(1);
+    }
     file = new File(filename);
   }
 

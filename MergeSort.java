@@ -8,7 +8,7 @@ class MergeSort implements SortMethod {
       sort(list, start, middle);
       sort(list, middle + 1, end);
 
-      merge (list, start, middle, end);
+      merge(list, start, middle, end);
     }
   }
 
