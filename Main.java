@@ -2,11 +2,9 @@ import java.time.Duration;
 import java.time.Instant;
 
 class Main {
+  private static FileHandler file = new FileHandler();
+
   public static void run(SortMethod method) {
-    FileReader file = new FileReader();
-
-    file.prompt();
-
     int length = file.parse();
     String[] list = file.getContents();
 
@@ -16,15 +14,12 @@ class Main {
 
     System.out.printf("It took %f milliseconds to %s the data\n\n", sortTime.toNanos() / 1000000.0, method.getClass().getName());
 
-    System.out.println("Contents are as follows:");
-    System.out.println("------------------------");
-
-    for (int i = 0; i < length; i++) {
-      System.out.println(list[i]);
-    }
+    file.printToFile(method.getClass().getName());
   }
 
   public static void main(String[] args) {
+    file.prompt();
+
     run(new QuickSort());
     run(new MergeSort());
   }

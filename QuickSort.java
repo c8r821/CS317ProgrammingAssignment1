@@ -9,7 +9,7 @@ class QuickSort implements SortMethod {
   }
 
   public int partition(String[] list, int start, int end) {
-    String pivot = list[start];
+    String pivot = list[end];
     int pivotIndex = start - 1;
     for (int x = start; x < end; x++) {
       if (list[x].compareToIgnoreCase(pivot) < 0) {
