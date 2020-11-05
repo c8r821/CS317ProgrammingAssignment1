@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 class MergeSort implements SortMethod {
+  // merge sort entry point
   public void sort(String[] list, int start, int end) {
     if (start < end) {
       int middle = (start + end) / 2;

@@ -1,12 +1,12 @@
-import java.util.Collections;
-
 class QuickSort implements SortMethod {
+  // helper method to swap two elements in a list
   public void swap(String[] list, int a, int b) {
     String tmp = list[a];
     list[a] = list[b];
     list[b] = tmp;
   }
 
+  // Actual quick sort entry point
   public void sort(String[] list, int start, int end) {
     if (start < end) {
       int p = partition(list, start, end);
@@ -16,6 +16,7 @@ class QuickSort implements SortMethod {
     }
   }
 
+  // quick sort partition
   public int partition(String[] list, int start, int end) {
     String pivot = list[start]; // Use first value as pivot
 
@@ -40,7 +41,7 @@ class QuickSort implements SortMethod {
       }
     }
 
-    swap(list, start, j);
+    swap(list, start, j); // swap the pivot with j
 
     return j;
   }
