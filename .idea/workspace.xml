@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="89dec717-57cb-494a-92da-01d371452b34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/MergeSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SortMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/SortMethod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +56,7 @@
       <workItem from="1604333034076" duration="5013000" />
       <workItem from="1604517370613" duration="1724000" />
       <workItem from="1604527906969" duration="4020000" />
+      <workItem from="1604543989039" duration="1704000" />
     </task>
     <servers />
   </component>
@@ -73,5 +77,9 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="1876" height="289" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1604543807959" />
+    <state x="559" y="288" key="Vcs.Push.Dialog.v2" timestamp="1604544020032">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="559" y="288" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1604544020032" />
   </component>
 </project>

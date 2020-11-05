@@ -8,10 +8,14 @@ class QuickSort implements SortMethod {
 
   // Actual quick sort entry point
   public void sort(String[] list, int start, int end) {
+    // ensure we still have data to sort
     if (start < end) {
+      // retrieve our partition index
       int p = partition(list, start, end);
 
+      // sort the left side
       sort(list, start, p - 1);
+      // sort the right side
       sort(list, p + 1, end);
     }
   }
@@ -20,8 +24,10 @@ class QuickSort implements SortMethod {
   public int partition(String[] list, int start, int end) {
     String pivot = list[start]; // Use first value as pivot
 
+    // partition iterators
     int i = start + 1, j = end;
 
+    // book implementation of partition
     while (i < j) {
       // moving i through array
       while (list[i].compareToIgnoreCase(pivot) < 0)
@@ -43,6 +49,7 @@ class QuickSort implements SortMethod {
 
     swap(list, start, j); // swap the pivot with j
 
+    // return new index of pivot
     return j;
   }
 }
