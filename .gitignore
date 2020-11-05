@@ -1,3 +1,4 @@
 *.class
-*.txt
+*.QuickSort.txt
+*.MergeSort.txt
 out/
