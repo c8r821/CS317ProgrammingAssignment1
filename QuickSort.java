@@ -30,11 +30,11 @@ class QuickSort implements SortMethod {
     // book implementation of partition
     while (i < j) {
       // moving i through array
-      while (list[i].compareToIgnoreCase(pivot) < 0)
+      while (i <= end && list[i].compareToIgnoreCase(pivot) < 0)
         i++;
 
       // moving j through array
-      while (list[j].compareToIgnoreCase(pivot) > 0)
+      while (j > start && list[j].compareToIgnoreCase(pivot) > 0)
         j--;
 
       // swap values at i and j
